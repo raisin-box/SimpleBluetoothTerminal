@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="newline_names">
-        <item>CR+LF</item>
-        <item>LF</item>
+        <item>CR+LF (\r\n)</item>
+        <item>LF (\n)</item>
         <item>&lt;none&gt;</item>
     </string-array>
     <string-array name="newline_values">

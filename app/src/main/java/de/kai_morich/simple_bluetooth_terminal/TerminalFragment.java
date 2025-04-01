@@ -170,7 +170,7 @@ public class TerminalFragment extends Fragment implements ServiceConnection, Ser
             String[] newlineValues = getResources().getStringArray(R.array.newline_values);
             int pos = java.util.Arrays.asList(newlineValues).indexOf(newline);
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-            builder.setTitle("Newline");
+            builder.setTitle("Newline Settings");
             builder.setSingleChoiceItems(newlineNames, pos, (dialog, item1) -> {
                 newline = newlineValues[item1];
                 dialog.dismiss();
@@ -300,13 +300,13 @@ public class TerminalFragment extends Fragment implements ServiceConnection, Ser
     
     @Override
     public void onSerialConnect() {
-        status("connected");
+        status("connected, robot is in idle mode");
         connected = Connected.True;
     }
 
     @Override
     public void onSerialConnectError(Exception e) {
-        status("connection failed: " + e.getMessage());
+        status("connection failed, please check if the module is in pairing mode: " + e.getMessage());
         disconnect();
     }
 
@@ -323,7 +323,7 @@ public class TerminalFragment extends Fragment implements ServiceConnection, Ser
 
     @Override
     public void onSerialIoError(Exception e) {
-        status("connection lost: " + e.getMessage());
+        status("connection lost, please check the board is powered: " + e.getMessage());
         disconnect();
     }
 
