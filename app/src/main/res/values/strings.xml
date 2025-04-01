@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">HC05 Bluetooth Terminal</string>
+    <string name="app_name">HC05 Companion App</string>
     <string name="devices">Bluetooth Devices</string>
+    <string name="Command_List">Robot Commands</string>
 
     <string name="bluetooth_permission_title">Bluetooth permission</string>
     <string name="bluetooth_permission_grant">Bluetooth permission is required by this App. Please grant in next dialog.</string>
