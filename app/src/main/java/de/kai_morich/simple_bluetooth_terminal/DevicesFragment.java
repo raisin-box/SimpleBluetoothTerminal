@@ -122,13 +122,13 @@ public class DevicesFragment extends ListFragment {
             }
         }
         if(bluetoothAdapter == null)
-            setEmptyText("<bluetooth not supported>");
+            setEmptyText("bluetooth not supported");
         else if(!bluetoothAdapter.isEnabled())
-            setEmptyText("<bluetooth is disabled>");
+            setEmptyText("bluetooth is disabled");
         else if(permissionMissing)
-            setEmptyText("<permission missing, use REFRESH>");
+            setEmptyText("permission missing, use REFRESH to connect to devices");
         else
-            setEmptyText("<no bluetooth devices found>");
+            setEmptyText("no bluetooth devices found");
         listAdapter.notifyDataSetChanged();
     }
 

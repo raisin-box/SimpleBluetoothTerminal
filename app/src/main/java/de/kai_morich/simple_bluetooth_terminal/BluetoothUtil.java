@@ -19,9 +19,9 @@ public class BluetoothUtil {
         void call();
     }
 
-    /**
-     * sort by name, then address. sort named devices first
-     */
+
+     //sort by name, then address
+     //sort named devices first
     @SuppressLint("MissingPermission")
     static int compareTo(BluetoothDevice a, BluetoothDevice b) {
         boolean aValid = a.getName()!=null && !a.getName().isEmpty();
@@ -36,9 +36,8 @@ public class BluetoothUtil {
         return a.getAddress().compareTo(b.getAddress());
     }
 
-    /**
-     * Android 12 permission handling
-     */
+
+     // Android 12 permission handling
     private static void showRationaleDialog(Fragment fragment, DialogInterface.OnClickListener listener) {
         final AlertDialog.Builder builder = new AlertDialog.Builder(fragment.getActivity());
         builder.setTitle(fragment.getString(R.string.bluetooth_permission_title));
@@ -80,6 +79,7 @@ public class BluetoothUtil {
         }
     }
 
+    //App will take various actions depending on permission result given when user either grants or denies BLUETOOTH_CONNECT
     static void onPermissionsResult(Fragment fragment, boolean granted, PermissionGrantedCallback cb) {
         if(Build.VERSION.SDK_INT < Build.VERSION_CODES.S)
             return;
