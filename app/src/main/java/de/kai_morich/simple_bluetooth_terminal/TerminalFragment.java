@@ -280,9 +280,7 @@ public class TerminalFragment extends Fragment implements ServiceConnection, Ser
         receiveText.append(spn);
     }
 
-    /*
-     * starting with Android 14, notifications are not shown in notification bar by default when App is in background
-     */
+    //starting with Android 14, notifications are not shown in notification bar by default when App is in background    
 
     private void showNotificationSettings() {
         Intent intent = new Intent();
@@ -298,9 +296,8 @@ public class TerminalFragment extends Fragment implements ServiceConnection, Ser
             showNotificationSettings();
     }
 
-    /*
-     * SerialListener
-     */
+    //SerialListener
+    
     @Override
     public void onSerialConnect() {
         status("connected");
