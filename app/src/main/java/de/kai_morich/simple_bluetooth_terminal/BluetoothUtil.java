@@ -60,6 +60,7 @@ public class BluetoothUtil {
         builder.show();
     }
 
+    //Checks if the fragment has neccesary bluetooth permissions for Android <=12
     static boolean hasPermissions(Fragment fragment, ActivityResultLauncher<String> requestPermissionLauncher) {
         if(Build.VERSION.SDK_INT < Build.VERSION_CODES.S)
             return true;

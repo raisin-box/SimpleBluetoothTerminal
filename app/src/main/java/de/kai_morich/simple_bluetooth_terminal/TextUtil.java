@@ -14,7 +14,7 @@ import java.io.ByteArrayOutputStream;
 
 final class TextUtil {
 
-    @ColorInt static int caretBackground = 0xff666666;
+    @ColorInt static int caretBackground = 0xff999999;
 
     final static String newline_crlf = "\r\n";
     final static String newline_lf = "\n";
