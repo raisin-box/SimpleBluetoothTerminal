@@ -17,7 +17,7 @@
         app:showAsAction="never" />
     <item
         android:id="@+id/backgroundNotification"
-        android:title="Notification if App in background"
+        android:title="Notification if HC05 connected background"
         android:checkable="true"
         app:showAsAction="never" />
 </menu>
