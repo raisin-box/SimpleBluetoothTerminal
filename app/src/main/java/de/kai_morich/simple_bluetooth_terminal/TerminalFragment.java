@@ -58,6 +58,7 @@ public class TerminalFragment extends Fragment implements ServiceConnection, Ser
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
         setRetainInstance(true);
+        assert getArguments() != null;
         deviceAddress = getArguments().getString("device");
     }
 
