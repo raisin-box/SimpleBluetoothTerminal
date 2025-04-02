@@ -29,7 +29,16 @@ public class CommandsFragment extends Fragment{
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
         List<String> commands = Arrays.asList(
-                "S", "N", "I", "D", "E"
+                "S: Go to sonar mode",
+                "L: Go to line following mode",
+                "N: Go to manual mode",
+                "M: Go to SD card reading state",
+                "I: Increase which event we look at stored at in SD card", 
+                "D: Decrease which even we look at stored in SD card", 
+                "E: Sets robot to idle mode (stops all operation)",
+                "Events in the SD card are stored in chronological order from the last sequence of operation",
+                "For example, if the first thing that happens is a perimeter detection",
+                "The first event you should see stored in the SD card is a log of a perimeter detection"
         );
 
         CommandsAdapter adapter = new CommandsAdapter(commands);
