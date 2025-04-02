@@ -37,8 +37,10 @@ public class DevicesFragment extends ListFragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
+
         if(getActivity().getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH))
             bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
         listAdapter = new ArrayAdapter<BluetoothDevice>(getActivity(), 0, listItems) {
@@ -56,6 +58,7 @@ public class DevicesFragment extends ListFragment {
                 return view;
             }
         };
+
         requestBluetoothPermissionLauncherForRefresh = registerForActivityResult(
                 new ActivityResultContracts.RequestPermission(),
                 granted -> BluetoothUtil.onPermissionsResult(this, granted, this::refresh));
@@ -63,6 +66,7 @@ public class DevicesFragment extends ListFragment {
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
+
         super.onActivityCreated(savedInstanceState);
         setListAdapter(null);
         View header = getActivity().getLayoutInflater().inflate(R.layout.device_list_header, null, false);
@@ -70,6 +74,7 @@ public class DevicesFragment extends ListFragment {
         setEmptyText("initializing...");
         ((TextView) getListView().getEmptyView()).setTextSize(18);
         setListAdapter(listAdapter);
+        
     }
 
     @Override
