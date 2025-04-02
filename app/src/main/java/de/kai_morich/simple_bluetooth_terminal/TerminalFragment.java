@@ -1,3 +1,5 @@
+// MAIN FRAGMENT
+
 package de.kai_morich.simple_bluetooth_terminal;
 
 import android.Manifest;
